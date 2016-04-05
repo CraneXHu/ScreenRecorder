@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">ScreenRecorder</string>
+    <string name="pre_record">Pre Record</string>
+    <string name="recording">Recording</string>
+    <string name="browser">Browser</string>
+    <string name="setting">Setting</string>
+    <string name="about">About</string>
+    <string name="title_feedback">Feedback</string>
+    <string name="stop">Stop</string>
+    <string name="menu_del">Delete</string>
+    
+    <string name="version">V1.0.0</string>
+
+    <string name="email">Email: hhxnbw@163.com</string>
+    <string name="github">Github: pkhope.github.com</string>
+
+    <string name="contact">Contact</string>
+    <string name="contact_hint">Email/QQ</string>
+
+    <string name="feedback">Thanks for the feedback,please write down your questions or comments</string>
+    <string name="activity_feedback_menu_send">Send</string>
+
+    <string name="title_help">Help</string>
+    <string name="help">1. How to stop recording ? \n Press power button</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_title">Video Setting</string>
+    <string name="pref_video_format">Format</string>
+    <string name="pref_resolution">Resolution</string>
+    <string name="pref_frame_rate">Frame Rate</string>
+    <string name="pref_bit_rate">Bit Rate</string>
+    <string name="pref_help">Help</string>
+    <string name="pref_feedback">Feedback</string>
+    <string name="pref_about">About</string>
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+</resources>

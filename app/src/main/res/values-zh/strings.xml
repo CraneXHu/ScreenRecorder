@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">录屏工具</string>
+    <string name="pre_record">准备录制</string>
+    <string name="recording">正在录制</string>
+    <string name="browser">浏览</string>
+    <string name="setting">设置</string>
+    <string name="about">关于</string>
+    <string name="title_feedback">反馈</string>
+    <string name="stop">停止</string>
+    <string name="menu_del">删除</string>
+
+    <string name="email">邮箱: hhxnbw@163.com</string>
+
+    <string name="contact">联系方式</string>
+    <string name="feedback">感谢您的反馈，请写下您的问题或意见</string>
+    <string name="activity_feedback_menu_send">提交</string>
+
+    <string name="title_help">帮助</string>
+    <string name="help">1. 如何停止录制 ？\n 按电源键</string>
+
+    <string name="pref_title">视频设置</string>
+    <string name="pref_video_format">格式</string>
+    <string name="pref_resolution">分辨率</string>
+    <string name="pref_frame_rate">帧率</string>
+    <string name="pref_bit_rate">比特率</string>
+    <string name="pref_help">功能介绍</string>
+    <string name="pref_feedback">反馈</string>
+    <string name="pref_about">关于录屏工具</string>
+    <string name="version">V1.0.0</string>
+</resources>

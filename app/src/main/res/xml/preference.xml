@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/pref_title">
+
+    <PreferenceCategory
+        android:title="@string/pref_title">
+
+        <ListPreference
+            android:key="video_format"
+            android:title="@string/pref_video_format"
+            android:summary="mp4"
+            android:entries="@array/video_format"
+            android:entryValues="@array/video_format_values"
+            android:dialogTitle="Format"
+            android:defaultValue="MP4"
+            android:layout="@layout/preference_item"/>
+
+        <ListPreference
+            android:key="resolution"
+            android:title="@string/pref_resolution"
+            android:summary="1200×720"
+            android:entries="@array/resolution"
+            android:entryValues="@array/resolution_values"
+            android:dialogTitle="Resolution"
+            android:defaultValue="1200×720"
+            android:layout="@layout/preference_item"/>
+
+        <ListPreference
+            android:key="frame_rate"
+            android:title="@string/pref_frame_rate"
+            android:summary="30 FPS"
+            android:entries="@array/frame_rate"
+            android:entryValues="@array/frame_rate_values"
+            android:dialogTitle="Frame Rate"
+            android:defaultValue="30"
+            android:layout="@layout/preference_item"/>
+
+        <ListPreference
+            android:key="bit_rate"
+            android:title="@string/pref_bit_rate"
+            android:summary="Auto"
+            android:entries="@array/bit_rate"
+            android:entryValues="@array/bit_rate_values"
+            android:dialogTitle="Bit Rate"
+            android:defaultValue="1"
+            android:layout="@layout/preference_item"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/about">
+
+        <Preference
+            android:title="@string/pref_help"
+            android:key="help" />
+
+        <Preference
+            android:title="@string/pref_feedback"
+            android:key="feedback" />
+
+        <Preference
+            android:title="@string/pref_about"
+            android:key="about" />
+    </PreferenceCategory>
+</PreferenceScreen>

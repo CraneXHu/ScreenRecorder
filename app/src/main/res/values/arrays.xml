@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="video_format">
+        <item>MP4</item>
+        <item>GIF</item>
+    </string-array>
+    <string-array name="video_format_values">
+        <item>MP4</item>
+        <item>GIF</item>
+    </string-array>
+
+    <string-array name="resolution">
+        <item>1200×720</item>
+        <item>800×480</item>
+        <item>1920×1080</item>
+    </string-array>
+    <string-array name="resolution_values">
+        <item>1200×720</item>
+        <item>800×480</item>
+        <item>1920×1080</item>
+    </string-array>
+
+    <string-array name="frame_rate">
+        <item>30 FPS</item>
+        <item>60 FPS</item>
+    </string-array>
+    <string-array name="frame_rate_values">
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="bit_rate">
+        <item>1 Mbps</item>
+        <item>4 Mbps</item>
+        <item>8 Mbps</item>
+        <item>12 Mbps</item>
+    </string-array>
+    <string-array name="bit_rate_values">
+        <item>1</item>
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
+    </string-array>
+
+</resources>
