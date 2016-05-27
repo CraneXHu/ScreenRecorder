@@ -1,6 +1,8 @@
 ##introduce
 This's a screen recorder for Android.
 
+![image](https://github.com/pkhope/ScreenRecorder/blob/master/screenrecorder.png)
+
 ##download
 [Address](http://fir.im/jph6?utm_source=fir&utm_medium=qr&release_id=56ecec40e75e2d0a6300002a)
 
