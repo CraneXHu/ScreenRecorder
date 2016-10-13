@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ScreenRecorder.iml" filepath="$PROJECT_DIR$/ScreenRecorder.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/library_zhy_CircleMenu/library_zhy_CircleMenu.iml" filepath="$PROJECT_DIR$/library_zhy_CircleMenu/library_zhy_CircleMenu.iml" />
     </modules>
   </component>
 </project>

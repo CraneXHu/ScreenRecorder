@@ -34,10 +34,8 @@ public class SRApplication extends Application {
     public String createFolder(){
         mDirectory = Environment.getExternalStorageDirectory() + "/ScreenRecorder/";
         File file = new File(mDirectory);
-        if(null==file || !file.exists()){
-
-            return null;
-
+        if(!file.exists()){
+            file.mkdirs();
         }
         return mDirectory;
     }
