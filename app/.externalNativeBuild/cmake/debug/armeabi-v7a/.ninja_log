@@ -1,0 +1,7 @@
+# ninja log v5
+1	192	0	CMakeFiles/GifEncorder.dir/src/main/jni/gifencorder.cpp.o	fdd301812e68acd5
+192	223	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libGifEncorder.so	ebed249a1981345e
+0	182	0	CMakeFiles/GifEncorder.dir/src/main/jni/gifencorder.cpp.o	fdd301812e68acd5
+182	217	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libGifEncorder.so	ebed249a1981345e
+1	234	0	CMakeFiles/GifEncorder.dir/src/main/jni/gifencorder.cpp.o	fdd301812e68acd5
+234	283	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libGifEncorder.so	ebed249a1981345e

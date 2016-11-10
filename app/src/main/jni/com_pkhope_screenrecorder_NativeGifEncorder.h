@@ -12,32 +12,32 @@ extern "C" {
  * Method:    test
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_test
-  (JNIEnv *, jobject);
+JNIEXPORT void JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_test
+  (JNIEnv *, jclass);
 
 /*
  * Class:     com_pkhope_screenrecorder_NativeGifEncorder
  * Method:    open
  * Signature: (Ljava/lang/String;III)Z
  */
-JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_open
-  (JNIEnv *, jobject, jstring, jint, jint, jint);
+JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_open
+  (JNIEnv *, jclass, jstring, jint, jint, jint);
 
 /*
  * Class:     com_pkhope_screenrecorder_NativeGifEncorder
  * Method:    addFrame
  * Signature: (Landroid/graphics/Bitmap;)Z
  */
-JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_addFrame
-  (JNIEnv *, jobject, jobject);
+JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_addFrame
+  (JNIEnv *, jclass, jobject);
 
 /*
  * Class:     com_pkhope_screenrecorder_NativeGifEncorder
  * Method:    save
  * Signature: ()Z
  */
-JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_save
-  (JNIEnv *, jobject);
+JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_save
+  (JNIEnv *, jclass);
 
 #ifdef __cplusplus
 }

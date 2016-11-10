@@ -23,10 +23,6 @@ import java.util.Date;
  */
 public class GifRecorder {
 
-    static {
-        System.loadLibrary("JniTest");
-    }
-
     private static final String TAG = "GifRecorder";
 
     private int mWidth = 100;

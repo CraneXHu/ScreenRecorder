@@ -5,13 +5,13 @@
 static GifWriter g_gifWriter;
 static int g_iDelay;
 
-JNIEXPORT void JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_test
-        (JNIEnv *env, jobject obj){
+JNIEXPORT void JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_test
+        (JNIEnv *env, jclass obj){
 
    env->NewStringUTF("This just a test for Android Studio NDK JNI developer!");
 }
-JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_open
-        (JNIEnv *env, jobject obj, jstring pathObj, jint width, jint height, jint delay){
+JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_open
+        (JNIEnv *env, jclass obj, jstring pathObj, jint width, jint height, jint delay){
     g_iDelay = delay;
     const char *path = env->GetStringUTFChars(pathObj,NULL);
     bool  result = GifBegin(&g_gifWriter,path,width,height,8);
@@ -19,8 +19,8 @@ JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_open
     return  result;
 }
 
-JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_addFrame
-        (JNIEnv *env, jobject obj, jobject bmpObj){
+JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_addFrame
+        (JNIEnv *env, jclass obj, jobject bmpObj){
     AndroidBitmapInfo bmpInfo={0};
     if(AndroidBitmap_getInfo(env,bmpObj,&bmpInfo) < 0){
         return false;
@@ -41,8 +41,8 @@ JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_addF
     return result;
 }
 
-JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_NativeGifEncorder_save
-        (JNIEnv *env, jobject obj){
+JNIEXPORT jboolean JNICALL Java_com_pkhope_screenrecorder_Recorder_NativeGifEncorder_save
+        (JNIEnv *env, jclass obj){
     bool result = GifEnd(&g_gifWriter);
     return result;
 }

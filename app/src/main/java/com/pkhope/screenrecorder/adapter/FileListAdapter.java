@@ -86,7 +86,11 @@ public class FileListAdapter extends Adapter<FileListAdapter.FileListViewHolder>
                     Intent intent = new Intent();
                     intent.setAction(Intent.ACTION_VIEW);
                     Uri uri = Uri.fromFile(new File(filePath));
-                    intent.setDataAndType(uri, "video/*;image/*");
+                    if (filePath.endsWith(".gif")){
+                        intent.setDataAndType(uri, "image/*");
+                    } else {
+                        intent.setDataAndType(uri, "video/*");
+                    }
                     context.startActivity(intent);
                 }
             });

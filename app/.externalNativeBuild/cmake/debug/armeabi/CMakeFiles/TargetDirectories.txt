@@ -1,0 +1,3 @@
+/Users/pkhope/Documents/develop/android/ScreenRecorder/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/edit_cache.dir
+/Users/pkhope/Documents/develop/android/ScreenRecorder/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/rebuild_cache.dir
+/Users/pkhope/Documents/develop/android/ScreenRecorder/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/GifEncorder.dir

@@ -7,6 +7,10 @@ import android.graphics.Bitmap;
  */
 public class NativeGifEncorder {
 
+    static {
+        System.loadLibrary("GifEncorder");
+    }
+
     public native void test();
 
     public native boolean open(String fileName,int width,int height,int delay);
