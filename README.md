@@ -1,12 +1,14 @@
-##introduce
+##Introduce
 This's a screen recorder for Android.
 
 ![image](https://github.com/pkhope/ScreenRecorder/blob/master/screenrecorder.png)
 
-##download
+##Download
+
 [Address](http://fir.im/jph6)
 
-##license
+##License
+
 The MIT License (MIT)
 
 Copyright (c) 2015 
