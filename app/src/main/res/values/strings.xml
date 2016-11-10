@@ -8,7 +8,9 @@
     <string name="title_feedback">Feedback</string>
     <string name="stop">Stop</string>
     <string name="menu_del">Delete</string>
-    
+    <string name="menu_share">Share</string>
+    <string name="exit">Exit</string>
+
     <string name="version">V1.0.0</string>
 
     <string name="email">Email: hhxnbw@163.com</string>
@@ -21,7 +23,10 @@
     <string name="activity_feedback_menu_send">Send</string>
 
     <string name="title_help">Help</string>
-    <string name="help">1. How to stop recording ? \n Press power button</string>
+    <string name="help">1. How to stop recording \n Press power button</string>
+
+    <string name="developer">Developer: PKHOPE</string>
+    <string name="weibo">Weibo: @pkhope404</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_title">Video Setting</string>

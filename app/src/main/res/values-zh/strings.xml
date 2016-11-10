@@ -8,6 +8,9 @@
     <string name="title_feedback">反馈</string>
     <string name="stop">停止</string>
     <string name="menu_del">删除</string>
+    <string name="menu_share">分享</string>
+
+    <string name="exit">退出</string>
 
     <string name="email">邮箱: hhxnbw@163.com</string>
 
@@ -16,7 +19,10 @@
     <string name="activity_feedback_menu_send">提交</string>
 
     <string name="title_help">帮助</string>
-    <string name="help">1. 如何停止录制 ？\n 按电源键</string>
+    <string name="help">1. 如何停止录制\n  按电源键</string>
+
+    <string name="developer">开发: PKHOPE</string>
+    <string name="weibo">微博: @pkhope404</string>
 
     <string name="pref_title">视频设置</string>
     <string name="pref_video_format">格式</string>

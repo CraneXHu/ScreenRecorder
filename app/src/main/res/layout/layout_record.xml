@@ -3,24 +3,17 @@
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <com.zhy.view.CircleMenuLayout
-        android:id="@+id/id_menulayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/screenrecorder" >
-
-        <RelativeLayout
-            android:id="@id/id_circle_menu_item_center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@mipmap/recorder" />
-
-        </RelativeLayout>
-    </com.zhy.view.CircleMenuLayout>
+    <TextView
+        android:id="@+id/btn_start"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/btn_screenshot"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:text="START"
+        android:gravity="center"
+        android:clickable="true" />
 
 </FrameLayout>

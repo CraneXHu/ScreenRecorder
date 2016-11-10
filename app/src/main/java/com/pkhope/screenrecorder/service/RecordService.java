@@ -20,14 +20,12 @@ import android.view.View;
 import android.view.WindowManager.LayoutParams;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.pkhope.screenrecorder.R;
 import com.pkhope.screenrecorder.Recorder.GifRecorder;
 import com.pkhope.screenrecorder.Recorder.VideoRecorder;
-import com.pkhope.screenrecorder.activity.BrowserActivity;
-import com.pkhope.screenrecorder.activity.ProjectionActivity;
-import com.pkhope.screenrecorder.activity.SettingsActivity;
-import com.zhy.view.CircleMenuLayout;
+import com.pkhope.screenrecorder.activity.MainActivity;
 
 /**
  * Created by thinkpad on 2016/1/19.
@@ -44,7 +42,7 @@ public class RecordService extends Service {
     private static final int MENU_EXIT = 2;
 
     private FrameLayout mFloatLayout;
-    private CircleMenuLayout mCircleMenuLayout;
+    private TextView mStartBtn;
     private WindowManager.LayoutParams mLayoutParams;
     private WindowManager mWindowManager;
     private DisplayMetrics mMetrics;
@@ -57,9 +55,6 @@ public class RecordService extends Service {
     private SharedPreferences mPreference;
 
     private String mVideoFormat;
-
-    private String[] mItemTexts = new String[] { "browser", "setting", "exit" };
-    private int[] mItemImgs = new int[] { R.mipmap.file, R.mipmap.setting, R.mipmap.exit};
 
     private BroadcastReceiver mScreenReceiver;
 
@@ -80,7 +75,7 @@ public class RecordService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         if (intent != null){
-            String data = intent.getStringExtra("command");
+            String data = intent.getStringExtra("cmd");
             if (data != null){
                 if (data.equals("start recording")){
                     startRecording();
@@ -91,9 +86,9 @@ public class RecordService extends Service {
                 else if (data.equals("show controlbar")){
                     mFloatLayout.setVisibility(View.VISIBLE);
                 }
-                else if (data.equals("hide controlbar")){
-                    mFloatLayout.setVisibility(View.INVISIBLE);
-                }
+//                else if (data.equals("hide controlbar")){
+//                    mFloatLayout.setVisibility(View.INVISIBLE);
+//                }
             }
         }
 
@@ -112,14 +107,14 @@ public class RecordService extends Service {
 
     }
 
-    private static void tearDownMediaProjection() {
-
-        if (mMediaProjection != null) {
-            mMediaProjection.stop();
-            mMediaProjection = null;
-        }
-
-    }
+//    private static void tearDownMediaProjection() {
+//
+//        if (mMediaProjection != null) {
+//            mMediaProjection.stop();
+//            mMediaProjection = null;
+//        }
+//
+//    }
 
     private void createFloatView(){
 
@@ -136,47 +131,20 @@ public class RecordService extends Service {
 
         final LayoutInflater inflater = LayoutInflater.from(getApplication());
         mFloatLayout = (FrameLayout)inflater.inflate(R.layout.layout_record,null);
-        mCircleMenuLayout = (CircleMenuLayout) mFloatLayout.findViewById(R.id.id_menulayout);
-        mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);
-        mWindowManager.addView(mFloatLayout,mLayoutParams);
-
-        mCircleMenuLayout.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
-                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-
-        mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener() {
-
+        mStartBtn = (TextView)mFloatLayout.findViewById(R.id.btn_start);
+        mStartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void itemClick(View view, int pos) {
-
-                if (pos == MENU_BROWSER){
-
-                    mFloatLayout.setVisibility(View.INVISIBLE);
-                    Intent intent = new Intent(RecordService.this,BrowserActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-
-                } else if (pos == MENU_SETTING){
-
-                    mFloatLayout.setVisibility(View.INVISIBLE);
-                    Intent intent = new Intent(RecordService.this,SettingsActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-
-                } else if (pos == MENU_EXIT){
-                    stopSelf();
-                }
-            }
-
-            @Override
-            public void itemCenterClick(View view) {
-
-                mFloatLayout.setVisibility(View.INVISIBLE);
-                Intent intent = new Intent(RecordService.this,ProjectionActivity.class);
-                intent.putExtra("command","start recording");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+            public void onClick(View view) {
+                Intent intent = new Intent(RecordService.this, RecordService.class);
+                intent.putExtra("cmd","start recording");
+                startService(intent);
             }
         });
+
+        mFloatLayout.setVisibility(View.INVISIBLE);
+
+        mWindowManager.addView(mFloatLayout, mLayoutParams);
+
     }
 
     private void getWindowsParams(){
@@ -197,6 +165,9 @@ public class RecordService extends Service {
 
                     stopRecording();
 
+                    Intent mainIntent = new Intent(RecordService.this, MainActivity.class);
+                    mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(mainIntent);
                 }
 
             }
@@ -278,8 +249,6 @@ public class RecordService extends Service {
 
         state = STATE_STOP;
 
-        mFloatLayout.setVisibility(View.VISIBLE);
-
         if (mVideoFormat.equals("MP4")){
 
             mVideoRecorder.finish();
@@ -295,7 +264,7 @@ public class RecordService extends Service {
             Log.i(TAG, "GIF Encorder Stoped");
         }
 
-        tearDownMediaProjection();
+//        tearDownMediaProjection();
 
     }
 
@@ -307,9 +276,9 @@ public class RecordService extends Service {
             mWindowManager.removeView(mFloatLayout);
         }
 
-        if (state == STATE_START){
-            stopRecording();
-        }
+//        if (state == STATE_START){
+//            stopRecording();
+//        }
 
         unregisterReceiver();
 

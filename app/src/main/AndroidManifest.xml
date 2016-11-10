@@ -10,9 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:excludeFromRecents="true"
-            android:autoRemoveFromRecents="true">
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,42 +18,28 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.ProjectionActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:excludeFromRecents="true"
-            android:autoRemoveFromRecents="true">
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/setting">
+        </activity>
+
+        <activity
+            android:name=".activity.HelpActivity"
+            android:label="@string/title_help">
 
         </activity>
 
         <activity
-            android:name=".activity.SettingsActivity"
-            android:label="@string/setting"
-            android:excludeFromRecents="true"
-            android:autoRemoveFromRecents="true"></activity>
-
-        <activity
-            android:name=".activity.BrowserActivity"
-            android:label="@string/browser"
-            android:excludeFromRecents="true"
-            android:autoRemoveFromRecents="true"></activity>
-
-        <activity
-            android:name=".activity.HelpActivity"
-            android:label="@string/title_help"
-            android:excludeFromRecents="true"
-            android:autoRemoveFromRecents="true"></activity>
-
-        <activity
             android:name=".activity.AboutActivity"
-            android:label="@string/about"
-            android:excludeFromRecents="true"
-            android:autoRemoveFromRecents="true"></activity>
+            android:label="@string/about">
+
+        </activity>
 
         <activity
             android:name=".activity.FeedBackActivity"
-            android:label="@string/title_feedback"
-            android:excludeFromRecents="true"
-            android:autoRemoveFromRecents="true"></activity>
+            android:label="@string/title_feedback">
+
+        </activity>
 
         <service android:name=".service.RecordService">
 

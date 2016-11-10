@@ -1,1 +1,1 @@
-include ':app', ':library_zhy_CircleMenu'
+include ':app'
